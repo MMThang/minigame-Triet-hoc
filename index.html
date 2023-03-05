@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="./dice/dice-six-faces-five.png" />
+    <title>Minigame</title>
+  </head>
+  <body>
+    <div class="control-area">
+      <div class="numberRolled"></div>
+      <div class="button-area">
+        <div class="button-wrap">
+          <button class="roll-the-dice">Nhóm 1</button>
+          <div class="curPos">
+            <div class="curLine"></div>
+            <div class="curBlock"></div>
+          </div>
+        </div>
+
+        <div class="button-wrap">
+          <button class="roll-the-dice">Nhóm 2</button>
+          <div class="curPos">
+            <div class="curLine"></div>
+            <div class="curBlock"></div>
+          </div>
+        </div>
+
+        <div class="button-wrap">
+          <button class="roll-the-dice">Nhóm 3</button>
+          <div class="curPos">
+            <div class="curLine"></div>
+            <div class="curBlock"></div>
+          </div>
+        </div>
+
+        <div class="button-wrap">
+          <button class="roll-the-dice">Nhóm 4</button>
+          <div class="curPos">
+            <div class="curLine"></div>
+            <div class="curBlock"></div>
+          </div>
+        </div>
+
+        <div class="button-wrap">
+          <button class="roll-the-dice">Nhóm 5</button>
+          <div class="curPos">
+            <div class="curLine"></div>
+            <div class="curBlock"></div>
+          </div>
+        </div>
+
+        <div class="button-wrap">
+          <button class="roll-the-dice">Nhóm 6</button>
+          <div class="curPos">
+            <div class="curLine"></div>
+            <div class="curBlock"></div>
+          </div>
+        </div>
+
+        <div class="button-wrap">
+          <button class="roll-the-dice">Nhóm 7</button>
+          <div class="curPos">
+            <div class="curLine"></div>
+            <div class="curBlock"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="game-area">
+      <div class="bottom">
+        <div
+          class="block player-1 player-2 player-3 player-4 player-5 player-6 player-7 plus1"
+        >
+          1
+        </div>
+        <div class="block plus1">1</div>
+        <div class="block plus1">1</div>
+        <div class="block plus2">2</div>
+        <div class="block plus1">1</div>
+      </div>
+      <div class="right">
+        <div class="block plus4">4</div>
+        <div class="block plus1">1</div>
+        <div class="block plus2">2</div>
+        <div class="block plus1">1</div>
+        <div class="block plus2">2</div>
+      </div>
+      <div class="top">
+        <div class="block">
+          <img
+            src="./asset/NicePng_jail-png_8907907.png"
+            alt=""
+            style="width: 100%"
+          />
+        </div>
+        <div class="block plus1">1</div>
+        <div class="block plus1">1</div>
+        <div class="block plus3">3</div>
+        <div class="block plus1">1</div>
+      </div>
+      <div class="left">
+        <div class="block minus2">-2</div>
+        <div class="block plus1">1</div>
+        <div class="block plus1">1</div>
+        <div class="block plus1">1</div>
+        <div class="block plus3">3</div>
+      </div>
+    </div>
+
+    <div class="information-box">
+      <div class="score">
+        <div class="score-box" style="background-color: rgba(197, 0, 0, 0.767)">
+          Nhóm 1: <span class="score-1">0</span>
+        </div>
+        <div class="score-box" style="background-color: orange">
+          Nhóm 2: <span class="score-2">0</span>
+        </div>
+        <div class="score-box" style="background-color: green">
+          Nhóm 3: <span class="score-3">0</span>
+        </div>
+        <div class="score-box" style="background-color: palevioletred">
+          Nhóm 4: <span class="score-4">0</span>
+        </div>
+        <div class="score-box" style="background-color: blue">
+          Nhóm 5: <span class="score-5">0</span>
+        </div>
+        <div class="score-box" style="background-color: rgb(0, 200, 200)">
+          Nhóm 6: <span class="score-6">0</span>
+        </div>
+        <div class="score-box" style="background-color: rgb(100, 0, 0)">
+          Nhóm 7: <span class="score-7">0</span>
+        </div>
+      </div>
+    </div>
+    <button class="question">Câu hỏi</button>
+    <div class="question-container">
+      <div class="question-placeholder"></div>
+      <div class="answer-box">
+        <div class="answer1"></div>
+        <div class="answer2"></div>
+        <div class="answer3"></div>
+        <div class="answer4"></div>
+      </div>
+      <div class="revealAnswer"></div>
+      <div class="trueAnswer"></div>
+    </div>
+    <script src="./script.js" type="module"></script>
+  </body>
+</html>

@@ -1,0 +1,395 @@
+:root {
+  --player-1-theme: rgba(197, 0, 0, 0.767);
+  --player-2-theme: orange;
+  --player-3-theme: green;
+  --player-4-theme: palevioletred;
+  --player-5-theme: blue;
+  --player-6-theme: rgb(0, 200, 200);
+  --player-7-theme: rgb(100, 0, 0);
+  --block-size: 140px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-image: url(./asset/BG.png);
+}
+
+.control-area {
+  height: 100vh;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+}
+
+.button-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex-grow: 2;
+  position: absolute;
+  height: 70%;
+  bottom: 30px;
+}
+
+.button-wrap {
+  display: flex;
+  width: 270px;
+}
+
+.roll-the-dice {
+  width: 170px;
+  height: 70px;
+  color: white;
+  font-size: 30px;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 12px;
+  border: 4px solid #fffb00;
+}
+
+.button-wrap:nth-child(1) .roll-the-dice {
+  background-color: var(--player-1-theme);
+}
+
+.button-wrap:nth-child(2) .roll-the-dice {
+  background-color: var(--player-2-theme);
+}
+
+.button-wrap:nth-child(3) .roll-the-dice {
+  background-color: var(--player-3-theme);
+}
+
+.button-wrap:nth-child(4) .roll-the-dice {
+  background-color: var(--player-4-theme);
+}
+
+.button-wrap:nth-child(5) .roll-the-dice {
+  background-color: var(--player-5-theme);
+}
+
+.button-wrap:nth-child(6) .roll-the-dice {
+  background-color: var(--player-6-theme);
+}
+
+.button-wrap:nth-child(7) .roll-the-dice {
+  background-color: var(--player-7-theme);
+}
+
+.roll-the-dice:hover + .curPos {
+  display: block;
+}
+
+.curPos {
+  width: 100px;
+  height: 70px;
+  border: black solid 2px;
+  background-color: white;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  display: none;
+}
+
+.player-1,
+.player-2,
+.player-3,
+.player-4,
+.player-5,
+.player-6,
+.player-7 {
+  color: white;
+  border-radius: 50%;
+  opacity: 1 !important;
+}
+
+.player-1 {
+  background-color: var(--player-1-theme) !important;
+}
+
+.player-2 {
+  background-color: var(--player-2-theme) !important;
+}
+
+.player-3 {
+  background-color: var(--player-3-theme) !important;
+}
+
+.player-4 {
+  background-color: var(--player-4-theme) !important;
+}
+
+.player-5 {
+  background-color: var(--player-5-theme) !important;
+}
+
+.player-6 {
+  background-color: var(--player-6-theme) !important;
+}
+
+.player-7 {
+  background-color: var(--player-7-theme) !important;
+}
+
+.roll-the-dice:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.numberRolled {
+  width: 284px;
+  flex-grow: 1;
+}
+
+.dice-img {
+  width: 100%;
+}
+
+.game-area {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  width: 880px;
+  height: 880px;
+  margin: 50px;
+}
+
+.bottom,
+.right,
+.top,
+.left {
+  display: flex;
+  position: absolute;
+}
+
+.top {
+  flex-direction: row-reverse;
+  top: 0px;
+  left: 140px;
+}
+
+.bottom {
+  flex-direction: row;
+  bottom: 40px;
+  left: 1px;
+}
+
+.left {
+  flex-direction: column;
+  left: 2px;
+}
+
+.right {
+  flex-direction: column-reverse;
+  right: 40px;
+  top: 140px;
+}
+
+.block {
+  border: 2px solid #000000;
+  width: var(--block-size);
+  height: var(--block-size);
+  margin: auto;
+  text-align: center;
+  background-color: white;
+  position: relative;
+  opacity: 0.7;
+  font-size: 80px;
+  font-family: cursive;
+}
+
+.plus2 {
+  background-color: #fffb00;
+}
+
+.plus3 {
+  background-color: teal;
+  opacity: 1;
+}
+
+.plus4 {
+  background: linear-gradient(
+    6deg,
+    rgba(255, 196, 249, 1) 41%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+
+.minus2 {
+  background-color: red;
+}
+
+.score {
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+  width: 300px;
+  font-size: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  justify-content: space-evenly;
+}
+
+.score-box {
+  height: 70px;
+  width: 300px;
+  border: 4px solid #fffb00;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  margin-top: 50px;
+}
+
+.question {
+  background-color: white;
+  width: 100px;
+  height: 50px;
+  position: absolute;
+  bottom: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.question::after {
+  content: "";
+  height: 100px;
+  width: 500px;
+  position: absolute;
+  bottom: 20px;
+  right: -225px;
+}
+
+.question::after:hover + .question-container {
+  display: block;
+  z-index: 99;
+}
+
+.question-container {
+  width: 1752px;
+  height: 900px;
+  background-image: url(./asset/question-box.png);
+  background-size: contain;
+  display: none;
+  position: absolute;
+}
+
+.question:hover + .question-container {
+  display: block;
+  cursor: pointer;
+  animation: appear 0.5s;
+}
+
+.question-container:hover {
+  display: block;
+}
+
+.answer-box {
+  height: 60%;
+  width: 95%;
+  position: absolute;
+  top: 320px;
+  left: 50px;
+}
+
+.question-placeholder,
+.answer1,
+.answer2,
+.answer3,
+.answer4 {
+  font-size: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  width: inherit;
+  z-index: 1;
+}
+
+.answer1,
+.answer2,
+.answer3,
+.answer4 {
+  height: 135px;
+  width: 100%;
+  text-align: justify;
+}
+
+.question-placeholder {
+  position: absolute;
+  top: 40px;
+  left: 100px;
+  width: 1550px;
+}
+
+.revealAnswer {
+  position: absolute;
+  top: auto;
+  background-color: #da251c;
+  width: 100px;
+  height: 100px;
+  z-index: 100;
+  border: 2px solid yellow;
+  border-radius: 50%;
+}
+
+.trueAnswer {
+  color: black;
+  font-size: 700px;
+  width: 700px;
+  height: 700px;
+  background-color: white;
+  display: none;
+  font-family: Arial, Helvetica, sans-serif;
+  z-index: 101;
+  position: absolute;
+  top: auto;
+  left: 25%;
+  text-align: center;
+  border: 4px solid black;
+  border-radius: 50%;
+}
+
+.revealAnswer:hover ~ .trueAnswer {
+  animation: appear 0.5s;
+  display: block;
+  cursor: pointer;
+}
+
+.answer1 {
+  left: 100px;
+  bottom: 350px;
+}
+
+.answer2 {
+  left: 100px;
+  bottom: 250px;
+}
+
+.answer3 {
+  left: 100px;
+  bottom: 150px;
+}
+
+.answer4 {
+  left: 100px;
+  bottom: 50px;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
